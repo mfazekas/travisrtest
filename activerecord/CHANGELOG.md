@@ -1,3 +1,10 @@
+*   Fix potenital stack level too deep in save or validate, when associations graph with
+    autosave had a loop.
+
+    Fixes #7809
+
+    *Miklós Fazekas*
+
 *   Schema loading rake tasks (like `db:schema:load` and `db:setup`) maintain
     the database connection to the current environment.
 
