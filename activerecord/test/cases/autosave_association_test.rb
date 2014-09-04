@@ -1018,8 +1018,8 @@ class TestAutosaveAssociationOnAHasOneAssociation < ActiveRecord::TestCase
   end
 
   def test_changed_for_autosave_should_handle_cycles
-    #@ship.pirate = @pirate
-    #assert_queries(0) { @ship.save! }
+    @ship.pirate = @pirate
+    assert_queries(0) { @ship.save! }
 
     #@parrot = @pirate.parrots.create(name: "some_name")
     #@parrot.name="changed_name"
