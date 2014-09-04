@@ -52,7 +52,7 @@ end
       t.test_files = (Dir.glob( "test/cases/**/*_test.rb" ).reject {
         |x| x =~ /\/adapters\//
       } + Dir.glob("test/cases/adapters/#{adapter_short}/**/*_test.rb"))
-
+      t.options = '--seed=45723'
       t.warning = true
       t.verbose = true
     }
